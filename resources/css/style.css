@@ -123,6 +123,11 @@ body {
   font-weight: 500;
 }
 
+.content-block .title {
+  margin-bottom: 10px;
+}
+
+
 .vinyl {
     display: flex;
     justify-content: space-between;
@@ -218,7 +223,7 @@ body {
 }
 
 .footer-link:hover {
-  color: #68ef00;
+  color: #7700ef;
 }
 
 .footer-group {
