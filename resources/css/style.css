@@ -45,7 +45,7 @@ body {
 }
 
 .container {
-  max-width: flex;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 35px 35px 70px 35px;
   gap: 35px;
@@ -56,7 +56,7 @@ body {
 
 .announcement {
   width: 100%;             /* Fill parent container */
-  background: #000;        /* Black box */
+  background: #131313;        /* Black box */
   padding: 20px;           /* Space inside the box */
   margin: 0px;     /* Outer margins */
   text-align: center;      /* Centered text */
@@ -86,7 +86,7 @@ body {
     display: inline-flex;
     flex-direction: column;   /* Stack items vertically */
     align-items: flex-start;  /* Align to the left */
-    gap: 20px;                /* Space between image and text */
+    gap: 35px;                /* Space between image and text */
     padding: 0px;
     width: 50%;
 }
@@ -108,7 +108,7 @@ body {
 }
 
 .description p {
-  font-size: 20px;
+  font-size: 18px;
   text-align: left;
   color: #333;
   max-width: flex;
@@ -120,7 +120,7 @@ body {
   text-align: left;
   margin-bottom: 0px;
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 500;
 }
 
 .vinyl {
@@ -134,18 +134,20 @@ body {
     color: #000000;
     border: 2px solid #000;
     gap: 35px;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 /* Buttons / links */
 .links {
-    display: inline-flex;
-    flex-direction: column;   /* Stack items vertically */
-    align-items: flex-start;  /* Align to the left */
-    gap: 10px;                /* Space between image and text */
-    padding: 0px;
+    display: flex;              
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;                /* <-- allow stretching */
+    padding: 0;
 }
+
 
 .btn-with-image {
     display: inline-flex;
@@ -278,7 +280,7 @@ body {
     flex-direction: column;
     margin: 0;             /* Remove auto-centering */
     padding: 20px;
-    gap: 20px;             /* Add units for gap */
+    gap: 35px;             /* Add units for gap */
     width: 100%;           /* Fill parent width */
     max-width: 100%;       /* Ensure it can fill entire parent */
     border: 2px solid #000;
@@ -287,8 +289,7 @@ body {
 .info-container {
     display: inline-flex;
     flex-direction: column;   /* Stack items vertically */
-    align-items: flex-start;  /* Align to the left */
-    gap: 20px;                /* Space between image and text */
+    align-items: flex-start;  /* Align to the left */             
     padding: 0px;
     width: 100%
 }
@@ -298,7 +299,7 @@ body {
 }
 
 .content-block {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .image-container-record {
@@ -310,23 +311,21 @@ body {
 }
 
     /* Make vinyl button full width */
-    .vinyl {
-        width: flex;
-        max-width: flex;    
-        font-size: 14px;
-        padding: 14px;
+ .vinyl {
+    width: 100%;   
+    font-size: 18px;
+    padding: 14px;
         
-    }
+}
 
-    /* Scale logo text */
-    .text-overlay {
-        font-size: 24px;
-        padding: 15px 25px;
-        border-width: 6px;
-    }
+.text-overlay { /* Large EURO TV Logo */
+  font-size: 24px;
+  padding: 15px 25px;
+  border-width: 6px;
+}
 /* Buttons / links */
 .links {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;   /* Stack items vertically */
     align-items: flex-start;  /* Align to the left */
     gap: 10px;                /* Space between image and text */
@@ -430,11 +429,11 @@ body {
 }
 
     /* Shrink hero image height */
-    .image-container {
-        height: 200px;
-    }
+.image-container {
+    height: 170px;
+}
 
-    .image-container img {
+.image-container img {
     min-width: 600px;
 }
 
@@ -453,12 +452,12 @@ body {
   color: #ffffff;
 }
 
-    .main-content-container {
+ .main-content-container {
     display: flex;
     flex-direction: column;
     margin: 0;             /* Remove auto-centering */
     padding: 16px;
-    gap: 16px;             /* Add units for gap */
+    gap: 24px;             /* Add units for gap */
     width: 100%;           /* Fill parent width */
     max-width: 100%;       /* Ensure it can fill entire parent */
     border: 1px solid #000;
@@ -468,7 +467,7 @@ body {
     display: inline-flex;
     flex-direction: column;   /* Stack items vertically */
     align-items: flex-start;  /* Align to the left */
-    gap: 16px;                /* Space between image and text */
+    gap: 24px;                /* Space between image and text */
     padding: 0px;
     width: 100%
 }
@@ -478,7 +477,8 @@ body {
 }
 
 .content-block {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .image-container-record {
@@ -489,28 +489,35 @@ body {
     overflow: hidden;
 }
 
-    /* Make vinyl button full width */
-    .vinyl {
-        width: flex;
-        max-width: flex;    
-        font-size: 14px;
-        padding: 14px;
-        
-    }
+.vinyl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;               /* fill parent */
+    max-width: 100% !important;/* override desktop limit */
+    border: 1.5px solid #000;
+    padding: 14px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
 
     /* Scale logo text */
-    .text-overlay {
+.text-overlay {
         font-size: 20px;
         padding: 10px 20px;
         border-width: 5px;
-    }
+}
 /* Buttons / links */
 .links {
-    display: inline-flex;
-    flex-direction: column;   /* Stack items vertically */
-    align-items: flex-start;  /* Align to the left */
-    gap: 10px;                /* Space between image and text */
-    padding: 0px;
+    display: flex;          
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;            /* full width on mobile */
+    padding: 0;
 }
 
 .btn-with-image {
@@ -540,7 +547,7 @@ body {
   justify-content: space-between;     /* Centers items horizontally */
   align-items: center;         /* Vertically centers them */
   gap: 16px; 
-  padding: 10px 10px;
+  padding: 30px 10px;
 }
 
 .footer-text {
